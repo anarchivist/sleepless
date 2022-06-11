@@ -1,0 +1,10 @@
+<div class="date byline-item">
+  {{ $dateFormat := $.Site.Params.dateFormat | default "January 2, 2006" }}
+  {{ $publishDate := .PublishDate }}
+  {{ with .Lastmod }}
+      <strong>{{ T "last_updated" }} </strong> <time class="dt-updated" datetime="{{ .Format "2006-01-02T15:04:05-0700" }}">{{ .Format $dateFormat }}</time>
+  {{ else }}
+  <strong>{{ T "originally_published" }} </strong>
+  <time class="dt-published" datetime="{{ $publishDate.Format "2006-01-02T15:04:05-0700" }}">{{ $publishDate.Format $dateFormat }}</time>
+  {{ end }}
+</div>

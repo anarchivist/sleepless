@@ -1,0 +1,8 @@
+<footer role="contentinfo">
+  <nav>
+    <ul>
+    {{ if .IsNode }}<li><a href="{{ print .Section "/index.xml" | absURL }}">Feed</a></li>{{ else if .IsHome }}<li><a href="{{ print "/index.xml" | absURL }}">Feed</a></li>{{ end }}
+    </ul>
+  </nav>
+  <p>Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
+</footer>

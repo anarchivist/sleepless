@@ -1,6 +1,54 @@
-baseURL: https://sleepless.seattle.wa.us/
+baseURL: http://sleepless.seattle.wa.us/
 languageCode: en-us
 title: sleepless
 module:
   imports:
     - path: github.com/anarchivist/hugo-sst-lancet
+
+enableGitInfo: true
+
+menu:
+  nav:
+    - name: About
+      url: /about
+      weight: 1
+
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
+
+services:
+  rss:
+    limit: 20
+
+privacy:
+  youtube:
+    privacyEnhanced: true
