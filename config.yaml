@@ -13,6 +13,8 @@ menu:
       url: /about
       weight: 1
 
+taxonomies:
+  tag: tags
 
 markup:
   defaultMarkdownHandler: goldmark
